@@ -8,7 +8,7 @@ date: "2019-10-12"
 
 ## Environment
 
-```sh
+```bash
 $ uname -a
 Linux base-debootstrap 4.4.0-159-generic #187-Ubuntu SMP Thu Aug 1 16:28:06 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
 ```
@@ -185,13 +185,17 @@ Note { // offset + 0x0
   0x43434343("CCCC") // offset + 0x0
   fastbins[1][0] // offset + 0x4
 }
+```
 
+```
 NoteList[1]
 Note { // offset + 0x0
   fastbins[0][1] // offset + 0x0
   fastbins[1][1] // offset + 0x4
 }
+```
 
+```
 NoteList[2]
 Note { // offset + 0x0
   putsFn_p() = 0x804862b // offset + 0x0
@@ -199,7 +203,7 @@ Note { // offset + 0x0
 }
 ```
 
-11. Execute PrintNote: 3->0
+9. Execute PrintNote: 3->0
 ```
 NoteList[0]
 Note { // offset + 0x0
@@ -220,7 +224,7 @@ Steps to Reproduce:
 5. 1->8->CCCCDDD
 6. 3->0
 
-```sh
+```bash
 pwndbg> r
 Starting program: /home/vagrant/work/pwnabletw/hacknote/hacknote
 ----------------------
@@ -339,13 +343,13 @@ Plan:
 If libc address leak is possible, there is no problem even if it is not read@GOT function.
 
 Function offset.
-```sh
+```bash
 $ nm -D libc_32.so.6 | grep system
 - snip -
 0003a940 W system
 ```
 
-```sh
+```bash
 $ nm -D ./libc_32.so.6 | grep read
 - snip -
 000d41c0 W read
