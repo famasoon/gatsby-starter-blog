@@ -3,6 +3,10 @@ import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import 'prismjs/themes/prism-okaidia.css'
+import {
+  TwitterShareButton, 
+  TwitterIcon
+} from 'react-share'
 
 import Bio from '../components/Bio'
 import { rhythm, scale } from '../utils/typography'
@@ -28,11 +32,17 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <TwitterShareButton url={location} title={post.frontmatter.title} via={'FAMASoon'} style={{
+            marginBottom: rhythm(1),
+          }}>
+          <TwitterIcon size={32} />
+        </TwitterShareButton>
         <hr
           style={{
             marginBottom: rhythm(1),
           }}
         />
+        
         <Bio />
 
         <ul
