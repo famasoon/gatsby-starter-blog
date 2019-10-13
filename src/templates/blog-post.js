@@ -32,7 +32,7 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <TwitterShareButton url={location} title={post.frontmatter.title} via={'FAMASoon'} style={{
+        <TwitterShareButton url={'https://x64.moe/'+encodeURIComponent(post.frontmatter.title)} title={post.frontmatter.title} via={'FAMASoon'} style={{
             marginBottom: rhythm(1),
           }}>
           <TwitterIcon size={32} />

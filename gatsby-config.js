@@ -3,9 +3,9 @@ module.exports = {
     title: 'x64.moe',
     author: 'Ryota Sakai',
     description: 'Blog about security and other things from FAMASoon (Ryota Sakai).',
-    siteUrl: 'https://github.com/famasoon/gatsby-starter-blog',
+    siteUrl: 'https://x64.moe',
   },
-  pathPrefix: '/gatsby-starter-blog',
+  pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
