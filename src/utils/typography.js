@@ -1,5 +1,4 @@
 import Typography from 'typography'
-import Wordpress2016 from 'typography-theme-wordpress-2016'
 import theme from "typography-theme-ocean-beach"
 
 theme.overrideThemeStyles = () => ({
@@ -7,6 +6,14 @@ theme.overrideThemeStyles = () => ({
     boxShadow: 'none',
   },
 })
+
+theme.googleFonts.push(
+  {
+    name: 'Noto+Sans+JP',
+    styles: ['400'],
+  }
+)
+theme.bodyFontFamily = ['Noto Sans JP', 'Roboto', 'serif']
 
 const typography = new Typography(theme)
 
