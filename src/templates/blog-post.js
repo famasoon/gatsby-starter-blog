@@ -13,8 +13,6 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const { previous, next } = this.props.pathContext
-    const description =
-      striptags(post.frontmatter.date).replace(/\r?\n/g, '').slice(0, 120) + '...'
 
     return (
       <div>
@@ -22,13 +20,12 @@ class BlogPostTemplate extends React.Component {
           title={`${post.frontmatter.title} | ${siteTitle}`}
           meta={
             [
-              { name: 'description', content: description },
-              { property: 'og:title', content: post.title },
-              { property: 'og:type', content: 'blog' },
-              { property: 'og:url', content: 'https://x64.moe/' + encodeURIComponent(post.frontmatter.title)},
-              { property: 'og:image', content: 'https://og-image.now.sh/**x64.moe**.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fhyper-color-logo.svg' },
-              { property: 'og:description', content: description },
-              { name: 'twitter:card', content: 'summary' },
+              { name: 'description', content: 'x64.moe' },
+              { property: 'og:title', content: post.frontmatter.title },
+              { property: 'og:description', content: 'x64.moe' },
+              { property: 'og:image', content: 'https://x64.moe/ogp_image.png' },
+              { property: 'og:url', content: 'https://x64.moe' },
+              { name: 'twitter:card', content: 'x64.moe' },
               { name: 'twitter:site', content: '@FAMASoon' },
             ]
           }
