@@ -25,7 +25,7 @@ class BlogPostTemplate extends React.Component {
               { property: 'og:description', content: 'x64.moe' },
               { property: 'og:image', content: 'https://x64.moe/ogp_image.png' },
               { property: 'og:url', content: 'https://x64.moe' },
-              { name: 'twitter:card', content: 'x64.moe' },
+              { name: 'twitter:card', content: 'summary' },
               { name: 'twitter:site', content: '@FAMASoon' },
             ]
           }
