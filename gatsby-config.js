@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'x64.moe',
-    author: 'Ryota Sakai',
-    description: 'Blog about security and other things from FAMASoon (Ryota Sakai).',
+    author: 'FAMASoon',
+    description: 'Blog about security and other things from FAMASoon.',
     siteUrl: 'https://x64.moe',
   },
   pathPrefix: '/',
