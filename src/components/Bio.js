@@ -18,7 +18,7 @@ class Bio extends React.Component {
       >
         <img
           src={profilePic}
-          alt={`FAMASoon(Ryota Sakai)`}
+          alt={`FAMASoon`}
           style={{
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
@@ -27,7 +27,7 @@ class Bio extends React.Component {
           }}
         />
         <p>
-          Written by <strong>FAMASoon(Ryota Sakai)</strong> who lives and works in Tokyo building security software.{' '}
+          Written by <strong>FAMASoon</strong> who lives and works in Tokyo building security software.{' '}
           <a href="https://twitter.com/FAMASoon">
             Twitter
           </a>/
