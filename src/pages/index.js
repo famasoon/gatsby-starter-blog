@@ -10,10 +10,15 @@ class BlogIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    const siteDesc = get(this, 'props.data.site.siteMetadata.description')
 
     return (
       <div>
-        <Helmet title={siteTitle} />
+        <Helmet title={'x64.moe'}
+          meta={[
+            { name: 'description', content: 'Blog about security and other things from FAMASoon.' }
+          ]}
+        />
         <Bio />
         {posts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
@@ -45,6 +50,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
