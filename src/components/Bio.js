@@ -27,7 +27,7 @@ class Bio extends React.Component {
           }}
         />
         <p>
-          Written by <strong>FAMASoon</strong> who lives and works in Tokyo building security software.{' '}
+          Written by <strong>FAMASoon</strong>.{' '}
           <a href="https://twitter.com/FAMASoon">
             Twitter
           </a>/
