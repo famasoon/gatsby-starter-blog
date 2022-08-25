@@ -4,6 +4,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import 'prismjs/themes/prism-okaidia.css'
 import striptags from 'striptags'
+import { graphql } from 'gatsby'
 
 import Bio from '../components/Bio'
 import { rhythm, scale } from '../utils/typography'
